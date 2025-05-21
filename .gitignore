@@ -1,0 +1,56 @@
+## Archivos de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Archivos de compilación
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
+
+## Archivos temporales y de sistema
+*.log
+*.tmp
+*.temp
+*.cache
+*.db
+*.pid
+*.svclog
+*.pdb
+
+## Archivos de test
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+## Archivos de configuración de paquetes
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Archivos de publicación
+*.publish.xml
+
+## Archivos de configuración de usuario
+*.vspscc
+*.vssscc
+
+## Archivos de seguridad
+secrets.json
+
+## Sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+## Otros
+node_modules/
+wwwroot/lib/
+.env
