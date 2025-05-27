@@ -91,7 +91,7 @@ namespace GymYang
 
         private void btReservar_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new FCalendar(usuarioNombre));
+            abrirFormulario(new FReservarClase(usuarioNombre));
         }
     }
 }

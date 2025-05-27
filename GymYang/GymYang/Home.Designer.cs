@@ -161,6 +161,7 @@
             MinimumSize = new Size(1024, 700);
             Name = "Home";
             RightToLeftLayout = true;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GymYang";
             Load += Home_Load;
             panel1.ResumeLayout(false);

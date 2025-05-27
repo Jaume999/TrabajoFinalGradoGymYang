@@ -51,6 +51,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(axWindowsMediaPlayer1);
             Name = "FVideo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FVideo";
             Load += FVideo_Load;
             ((System.ComponentModel.ISupportInitialize)axWindowsMediaPlayer1).EndInit();

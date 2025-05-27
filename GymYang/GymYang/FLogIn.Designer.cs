@@ -139,6 +139,7 @@
             DoubleBuffered = true;
             MinimumSize = new Size(598, 591);
             Name = "FLogIn";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FLogIn";
             Load += FLogIn_Load;
             panelLogIn.ResumeLayout(false);

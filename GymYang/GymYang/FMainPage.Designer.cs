@@ -581,6 +581,7 @@
             Controls.Add(panelMainR);
             MinimumSize = new Size(818, 733);
             Name = "FMainPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FMainPage";
             panelMainR.ResumeLayout(false);
             panelSubSub5.ResumeLayout(false);

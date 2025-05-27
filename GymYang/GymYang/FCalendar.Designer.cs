@@ -43,7 +43,7 @@
             monthCalendar.FirstDayOfWeek = Day.Monday;
             monthCalendar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             monthCalendar.ForeColor = Color.DarkOrange;
-            monthCalendar.Location = new Point(165, 134);
+            monthCalendar.Location = new Point(149, 127);
             monthCalendar.Name = "monthCalendar";
             monthCalendar.TabIndex = 0;
             monthCalendar.TitleBackColor = Color.DarkOrange;
@@ -66,11 +66,12 @@
             // btnGuardar
             // 
             btnGuardar.BackColor = SystemColors.ActiveCaptionText;
+            btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderSize = 3;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.DarkOrange;
-            btnGuardar.Location = new Point(165, 83);
+            btnGuardar.Location = new Point(149, 83);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(220, 32);
             btnGuardar.TabIndex = 2;
@@ -99,7 +100,8 @@
             Controls.Add(monthCalendar);
             DoubleBuffered = true;
             Name = "FCalendar";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FCalendar";
             FormClosing += FCalendar_FormClosing;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

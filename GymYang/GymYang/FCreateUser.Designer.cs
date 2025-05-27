@@ -193,6 +193,7 @@ namespace GymYang
             DoubleBuffered = true;
             MinimumSize = new Size(598, 591);
             Name = "FCreateUser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FCreateUser";
             Load += FCreateUser_Load;
             panel1.ResumeLayout(false);

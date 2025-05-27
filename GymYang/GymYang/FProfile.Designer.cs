@@ -214,6 +214,7 @@
             DoubleBuffered = true;
             MinimumSize = new Size(598, 591);
             Name = "FProfile";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FProfile";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
