@@ -41,6 +41,7 @@
             btAtras = new Button();
             lbApellidos = new Label();
             tbApellidos = new TextBox();
+            btnCerrarSesion = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -203,6 +204,23 @@
             tbApellidos.Size = new Size(125, 20);
             tbApellidos.TabIndex = 3;
             // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.BackColor = SystemColors.ActiveCaptionText;
+            btnCerrarSesion.Cursor = Cursors.Hand;
+            btnCerrarSesion.FlatAppearance.BorderColor = Color.DarkOrange;
+            btnCerrarSesion.FlatAppearance.BorderSize = 3;
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCerrarSesion.ForeColor = Color.DarkOrange;
+            btnCerrarSesion.Location = new Point(131, 448);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(320, 55);
+            btnCerrarSesion.TabIndex = 3;
+            btnCerrarSesion.Text = "Cerrar Sesión";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
+            // 
             // FProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -210,6 +228,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(580, 544);
+            Controls.Add(btnCerrarSesion);
             Controls.Add(panel1);
             DoubleBuffered = true;
             MinimumSize = new Size(598, 591);
@@ -235,5 +254,6 @@
         private Button btEliminarCuenta;
         private CheckBox cbPassword;
         private Button btModificar;
+        private Button btnCerrarSesion;
     }
 }

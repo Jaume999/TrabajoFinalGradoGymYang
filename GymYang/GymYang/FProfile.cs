@@ -163,5 +163,14 @@ namespace GymYang
                 }
             }
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Home homeForm = new Home();
+            homeForm.Show();
+
+            this.Close();
+            previousForm.Close();
+        }
     }
 }
