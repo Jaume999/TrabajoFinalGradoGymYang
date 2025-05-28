@@ -46,6 +46,7 @@
             btnPlaza14 = new Button();
             btnPlaza15 = new Button();
             btnPlaza16 = new Button();
+            btnTitle = new Button();
             SuspendLayout();
             // 
             // monthCalendar
@@ -268,6 +269,21 @@
             btnPlaza16.TabIndex = 32;
             btnPlaza16.UseVisualStyleBackColor = false;
             // 
+            // btnTitle
+            // 
+            btnTitle.BackColor = SystemColors.ActiveCaptionText;
+            btnTitle.FlatAppearance.BorderColor = Color.DarkOrange;
+            btnTitle.FlatAppearance.BorderSize = 3;
+            btnTitle.FlatStyle = FlatStyle.Flat;
+            btnTitle.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnTitle.ForeColor = Color.DarkOrange;
+            btnTitle.Location = new Point(141, 40);
+            btnTitle.Name = "btnTitle";
+            btnTitle.Size = new Size(220, 65);
+            btnTitle.TabIndex = 33;
+            btnTitle.Text = "Clases de Yoga";
+            btnTitle.UseVisualStyleBackColor = false;
+            // 
             // FReservarClase
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -275,6 +291,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(501, 459);
+            Controls.Add(btnTitle);
             Controls.Add(btnPlaza16);
             Controls.Add(btnPlaza15);
             Controls.Add(btnPlaza14);
@@ -295,7 +312,7 @@
             DoubleBuffered = true;
             Name = "FReservarClase";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FReservarClase";
+            Text = "FReservarClaseYoga";
             ResumeLayout(false);
         }
 
@@ -318,5 +335,6 @@
         private Button btnPlaza14;
         private Button btnPlaza15;
         private Button btnPlaza16;
+        private Button btnTitle;
     }
 }

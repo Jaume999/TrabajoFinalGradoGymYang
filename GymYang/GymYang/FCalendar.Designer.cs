@@ -33,6 +33,7 @@
             tbCalendar = new TextBox();
             btnGuardar = new Button();
             panel1 = new Panel();
+            btnPDF = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,6 +89,23 @@
             panel1.Size = new Size(501, 60);
             panel1.TabIndex = 3;
             // 
+            // btnPDF
+            // 
+            btnPDF.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnPDF.BackColor = SystemColors.ActiveCaptionText;
+            btnPDF.Cursor = Cursors.Hand;
+            btnPDF.FlatAppearance.BorderSize = 3;
+            btnPDF.FlatStyle = FlatStyle.Flat;
+            btnPDF.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPDF.ForeColor = Color.DarkOrange;
+            btnPDF.Location = new Point(149, 380);
+            btnPDF.Name = "btnPDF";
+            btnPDF.Size = new Size(220, 32);
+            btnPDF.TabIndex = 4;
+            btnPDF.Text = "Crear PDF";
+            btnPDF.UseVisualStyleBackColor = false;
+            btnPDF.Click += btnPDF_Click;
+            // 
             // FCalendar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -95,6 +113,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(501, 459);
+            Controls.Add(btnPDF);
             Controls.Add(panel1);
             Controls.Add(btnGuardar);
             Controls.Add(monthCalendar);
@@ -114,5 +133,6 @@
         private TextBox tbCalendar;
         private Button btnGuardar;
         private Panel panel1;
+        private Button btnPDF;
     }
 }

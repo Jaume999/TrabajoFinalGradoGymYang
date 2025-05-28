@@ -30,8 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMainPage));
             panelMainR = new Panel();
+            panelSubSub6 = new Panel();
+            btnReservarZumba = new Button();
+            btnReservarYoga = new Button();
+            panelSub6 = new Panel();
             btReservar = new Button();
             panelSubSub5 = new Panel();
+            button1 = new Button();
             button18 = new Button();
             button19 = new Button();
             button20 = new Button();
@@ -66,6 +71,8 @@
             pbProfile = new PictureBox();
             panelMainL = new Panel();
             panelMainR.SuspendLayout();
+            panelSubSub6.SuspendLayout();
+            panelSub6.SuspendLayout();
             panelSubSub5.SuspendLayout();
             panelSub5.SuspendLayout();
             panelSubSub4.SuspendLayout();
@@ -84,7 +91,8 @@
             // 
             panelMainR.AutoScroll = true;
             panelMainR.BackColor = SystemColors.ActiveCaptionText;
-            panelMainR.Controls.Add(btReservar);
+            panelMainR.Controls.Add(panelSubSub6);
+            panelMainR.Controls.Add(panelSub6);
             panelMainR.Controls.Add(panelSubSub5);
             panelMainR.Controls.Add(panelSub5);
             panelMainR.Controls.Add(panelSubSub4);
@@ -103,18 +111,72 @@
             panelMainR.Size = new Size(289, 686);
             panelMainR.TabIndex = 0;
             // 
+            // panelSubSub6
+            // 
+            panelSubSub6.Controls.Add(btnReservarZumba);
+            panelSubSub6.Controls.Add(btnReservarYoga);
+            panelSubSub6.Dock = DockStyle.Top;
+            panelSubSub6.Location = new Point(0, 1392);
+            panelSubSub6.Name = "panelSubSub6";
+            panelSubSub6.Size = new Size(268, 125);
+            panelSubSub6.TabIndex = 0;
+            panelSubSub6.Visible = false;
+            // 
+            // btnReservarZumba
+            // 
+            btnReservarZumba.BackColor = Color.FromArgb(255, 192, 128);
+            btnReservarZumba.BackgroundImageLayout = ImageLayout.Stretch;
+            btnReservarZumba.Cursor = Cursors.Hand;
+            btnReservarZumba.Dock = DockStyle.Top;
+            btnReservarZumba.FlatAppearance.BorderColor = Color.Black;
+            btnReservarZumba.FlatStyle = FlatStyle.Flat;
+            btnReservarZumba.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReservarZumba.Location = new Point(0, 63);
+            btnReservarZumba.Name = "btnReservarZumba";
+            btnReservarZumba.Size = new Size(268, 63);
+            btnReservarZumba.TabIndex = 14;
+            btnReservarZumba.Text = "Reservar Clase Zumba";
+            btnReservarZumba.UseVisualStyleBackColor = false;
+            btnReservarZumba.Click += btnReservarZumba_Click;
+            // 
+            // btnReservarYoga
+            // 
+            btnReservarYoga.BackColor = Color.FromArgb(255, 192, 128);
+            btnReservarYoga.BackgroundImageLayout = ImageLayout.Stretch;
+            btnReservarYoga.Cursor = Cursors.Hand;
+            btnReservarYoga.Dock = DockStyle.Top;
+            btnReservarYoga.FlatAppearance.BorderColor = Color.Black;
+            btnReservarYoga.FlatStyle = FlatStyle.Flat;
+            btnReservarYoga.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReservarYoga.Location = new Point(0, 0);
+            btnReservarYoga.Name = "btnReservarYoga";
+            btnReservarYoga.Size = new Size(268, 63);
+            btnReservarYoga.TabIndex = 13;
+            btnReservarYoga.Text = "Reservar Clase Yoga";
+            btnReservarYoga.UseVisualStyleBackColor = false;
+            btnReservarYoga.Click += btnReservarYoga_Click;
+            // 
+            // panelSub6
+            // 
+            panelSub6.Controls.Add(btReservar);
+            panelSub6.Dock = DockStyle.Top;
+            panelSub6.Location = new Point(0, 1312);
+            panelSub6.Name = "panelSub6";
+            panelSub6.Size = new Size(268, 80);
+            panelSub6.TabIndex = 13;
+            // 
             // btReservar
             // 
             btReservar.BackColor = Color.FromArgb(255, 128, 0);
             btReservar.BackgroundImageLayout = ImageLayout.Stretch;
             btReservar.Cursor = Cursors.Hand;
-            btReservar.Dock = DockStyle.Bottom;
+            btReservar.Dock = DockStyle.Fill;
             btReservar.FlatAppearance.BorderColor = Color.Black;
             btReservar.FlatStyle = FlatStyle.Flat;
             btReservar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btReservar.Location = new Point(0, 1312);
+            btReservar.Location = new Point(0, 0);
             btReservar.Name = "btReservar";
-            btReservar.Size = new Size(268, 82);
+            btReservar.Size = new Size(268, 80);
             btReservar.TabIndex = 12;
             btReservar.Text = "Reservar Clase";
             btReservar.UseVisualStyleBackColor = false;
@@ -123,6 +185,7 @@
             // panelSubSub5
             // 
             panelSubSub5.AutoScroll = true;
+            panelSubSub5.Controls.Add(button1);
             panelSubSub5.Controls.Add(button18);
             panelSubSub5.Controls.Add(button19);
             panelSubSub5.Controls.Add(button20);
@@ -132,6 +195,20 @@
             panelSubSub5.Size = new Size(268, 158);
             panelSubSub5.TabIndex = 11;
             panelSubSub5.Visible = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 128, 0);
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Cursor = Cursors.Hand;
+            button1.Dock = DockStyle.Fill;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(0, 158);
+            button1.Name = "button1";
+            button1.Size = new Size(268, 0);
+            button1.TabIndex = 4;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = false;
             // 
             // button18
             // 
@@ -448,11 +525,11 @@
             btCalendar.Dock = DockStyle.Bottom;
             btCalendar.FlatStyle = FlatStyle.Flat;
             btCalendar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btCalendar.Location = new Point(0, 1394);
+            btCalendar.Location = new Point(0, 1517);
             btCalendar.Name = "btCalendar";
             btCalendar.Size = new Size(268, 82);
             btCalendar.TabIndex = 3;
-            btCalendar.Text = "Calendario";
+            btCalendar.Text = "Calendario para que\r\n apuntes tu rutina";
             btCalendar.UseVisualStyleBackColor = false;
             btCalendar.Click += btCalendar_Click;
             // 
@@ -584,6 +661,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FMainPage";
             panelMainR.ResumeLayout(false);
+            panelSubSub6.ResumeLayout(false);
+            panelSub6.ResumeLayout(false);
             panelSubSub5.ResumeLayout(false);
             panelSub5.ResumeLayout(false);
             panelSubSub4.ResumeLayout(false);
@@ -637,5 +716,10 @@
         private Button button19;
         private Button button20;
         private Button btReservar;
+        private Panel panelSub6;
+        private Button button1;
+        private Panel panelSubSub6;
+        private Button btnReservarZumba;
+        private Button btnReservarYoga;
     }
 }

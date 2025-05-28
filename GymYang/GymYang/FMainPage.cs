@@ -64,6 +64,10 @@ namespace GymYang
         {
             showSubMenu(panelSubSub5);
         }
+        private void btReservar_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubSub6);
+        }
         private void btDorsales_Click(object sender, EventArgs e)
         {
             //Porque tengo la carpeta del proyecto en el Escritorio si lo tuviera en otro sitio seria cambiar el .Desktop
@@ -89,9 +93,14 @@ namespace GymYang
             abrirFormulario(new FCalendar(usuarioNombre));
         }
 
-        private void btReservar_Click(object sender, EventArgs e)
+        private void btnReservarYoga_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FReservarClase(usuarioNombre));
+        }
+
+        private void btnReservarZumba_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FReservarClaseZumba(usuarioNombre));
         }
     }
 }

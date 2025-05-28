@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Windows.Forms;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace GymYang
 {
@@ -87,6 +89,62 @@ namespace GymYang
         private void FCalendar_FormClosing(object sender, FormClosingEventArgs e)
         {
             GuardarInformacion();
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            string ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Rutina_{usuarioActual}.pdf");
+            Document documento = new Document(PageSize.A4, 50, 50, 50, 50);
+
+            try
+            {
+                PdfWriter.GetInstance(documento, new FileStream(ruta, FileMode.Create));
+                documento.Open();
+
+                string rutaLogo = @"C:\Users\jmg18\Desktop\Proyecto_Final_Grado_JaumeMoltoGallego\Imagenes\logo.png";
+                if (File.Exists(rutaLogo))
+                {
+                    iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(rutaLogo);
+                    logo.ScaleToFit(100f, 100f);
+                    logo.Alignment = Element.ALIGN_CENTER;
+                    documento.Add(logo);
+
+                    documento.Add(new Paragraph("\n"));
+                }
+
+                //Fuente por defecto
+                var fuenteTitulo = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+                var fuenteFecha = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.ORANGE);
+                var fuenteTexto = FontFactory.GetFont(FontFactory.HELVETICA, 11);
+
+                //Título general
+                Paragraph titulo = new Paragraph($"Rutina de {usuarioActual}\n\n", fuenteTitulo);
+                titulo.Alignment = Element.ALIGN_CENTER;
+                documento.Add(titulo);
+
+                //Ordenar por fecha
+                var entradasOrdenadas = datosDelUsuario
+                    .Where(kvp => !string.IsNullOrWhiteSpace(kvp.Value))
+                    .OrderBy(kvp => DateTime.TryParse(kvp.Key, out var fecha) ? fecha : DateTime.MinValue);
+
+                foreach (var entrada in entradasOrdenadas)
+                {
+                    if (!DateTime.TryParse(entrada.Key, out var fecha)) continue;
+
+                    documento.Add(new Paragraph(fecha.ToString("dddd, dd MMMM yyyy"), fuenteFecha));
+                    documento.Add(new Paragraph(entrada.Value + "\n", fuenteTexto));
+                }
+
+                MessageBox.Show("PDF creado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar el PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                documento.Close();
+            }
         }
     }
 }
