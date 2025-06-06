@@ -51,6 +51,7 @@
             // 
             // btnTitle
             // 
+            btnTitle.Anchor = AnchorStyles.Top;
             btnTitle.BackColor = SystemColors.ActiveCaptionText;
             btnTitle.FlatAppearance.BorderColor = Color.DarkOrange;
             btnTitle.FlatAppearance.BorderSize = 3;

@@ -42,7 +42,6 @@
             axWindowsMediaPlayer1.OcxState = (AxHost.State)resources.GetObject("axWindowsMediaPlayer1.OcxState");
             axWindowsMediaPlayer1.Size = new Size(800, 450);
             axWindowsMediaPlayer1.TabIndex = 0;
-            axWindowsMediaPlayer1.Enter += axWindowsMediaPlayer1_Enter;
             // 
             // FVideo
             // 

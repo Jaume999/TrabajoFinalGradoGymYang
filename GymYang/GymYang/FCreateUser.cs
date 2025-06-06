@@ -49,7 +49,7 @@ namespace GymYang
                     return;
                 }
 
-                // OPCIONAL: Verifica si el nombre ya existe
+                // Verifica si el nombre ya existe
                 string checkSql = "SELECT COUNT(*) FROM public.usuarios WHERE nombre = @nombre";
                 using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkSql, conexionBD))
                 {

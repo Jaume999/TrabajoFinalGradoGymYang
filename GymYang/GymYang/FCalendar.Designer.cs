@@ -66,6 +66,7 @@
             // 
             // btnGuardar
             // 
+            btnGuardar.Anchor = AnchorStyles.Top;
             btnGuardar.BackColor = SystemColors.ActiveCaptionText;
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderSize = 3;
@@ -91,16 +92,16 @@
             // 
             // btnPDF
             // 
-            btnPDF.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnPDF.Anchor = AnchorStyles.Bottom;
             btnPDF.BackColor = SystemColors.ActiveCaptionText;
             btnPDF.Cursor = Cursors.Hand;
-            btnPDF.FlatAppearance.BorderSize = 3;
+            btnPDF.FlatAppearance.BorderSize = 5;
             btnPDF.FlatStyle = FlatStyle.Flat;
-            btnPDF.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPDF.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPDF.ForeColor = Color.DarkOrange;
-            btnPDF.Location = new Point(149, 380);
+            btnPDF.Location = new Point(119, 318);
             btnPDF.Name = "btnPDF";
-            btnPDF.Size = new Size(220, 32);
+            btnPDF.Size = new Size(275, 66);
             btnPDF.TabIndex = 4;
             btnPDF.Text = "Crear PDF";
             btnPDF.UseVisualStyleBackColor = false;

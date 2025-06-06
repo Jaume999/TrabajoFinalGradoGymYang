@@ -206,6 +206,7 @@
             // 
             // btnCerrarSesion
             // 
+            btnCerrarSesion.Anchor = AnchorStyles.Bottom;
             btnCerrarSesion.BackColor = SystemColors.ActiveCaptionText;
             btnCerrarSesion.Cursor = Cursors.Hand;
             btnCerrarSesion.FlatAppearance.BorderColor = Color.DarkOrange;

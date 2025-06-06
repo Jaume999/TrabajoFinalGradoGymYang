@@ -41,9 +41,5 @@ namespace GymYang
                 MessageBox.Show("Error al intentar reproducir el video: " + ex.Message);
             }
         }
-
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
-        {
-        }
     }
 }
