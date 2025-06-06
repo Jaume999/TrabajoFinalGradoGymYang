@@ -33,6 +33,7 @@
             tbCalendar = new TextBox();
             btnGuardar = new Button();
             panel1 = new Panel();
+            button1 = new Button();
             btnPDF = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -55,13 +56,13 @@
             // 
             tbCalendar.BackColor = Color.Black;
             tbCalendar.BorderStyle = BorderStyle.None;
-            tbCalendar.Dock = DockStyle.Fill;
+            tbCalendar.Dock = DockStyle.Bottom;
             tbCalendar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tbCalendar.ForeColor = Color.DarkOrange;
-            tbCalendar.Location = new Point(0, 0);
+            tbCalendar.Location = new Point(0, 28);
             tbCalendar.Multiline = true;
             tbCalendar.Name = "tbCalendar";
-            tbCalendar.Size = new Size(501, 60);
+            tbCalendar.Size = new Size(501, 49);
             tbCalendar.TabIndex = 1;
             // 
             // btnGuardar
@@ -83,12 +84,29 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(tbCalendar);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(501, 60);
+            panel1.Size = new Size(501, 77);
             panel1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ActiveCaptionText;
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderColor = Color.DarkOrange;
+            button1.FlatAppearance.BorderSize = 2;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.DarkOrange;
+            button1.Location = new Point(0, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(501, 29);
+            button1.TabIndex = 2;
+            button1.Text = "Escriba aquí";
+            button1.UseVisualStyleBackColor = false;
             // 
             // btnPDF
             // 
@@ -135,5 +153,6 @@
         private Button btnGuardar;
         private Panel panel1;
         private Button btnPDF;
+        private Button button1;
     }
 }

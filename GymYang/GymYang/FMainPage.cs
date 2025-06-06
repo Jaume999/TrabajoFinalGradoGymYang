@@ -138,7 +138,7 @@ namespace GymYang
         private void btnPrensaPiernas_Click(object sender, EventArgs e)
         {
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            vPath = System.IO.Path.Combine(desktopPath, "Proyecto_Final_Grado_JaumeMoltoGallego", "Videos", "dorsales.mp4");
+            vPath = System.IO.Path.Combine(desktopPath, "Proyecto_Final_Grado_JaumeMoltoGallego", "Videos", "prensaPiernas.mp4");
             abrirFormulario(new FVideo(vPath));
         }
 
